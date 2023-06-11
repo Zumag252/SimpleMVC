@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Loop</title>
+    <style>
+        table th, table td {padding: 5px;}
+
+    </style>
+</head>
+<body>
+<h1>CARS</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>BRAND</th>
+        <th>COLOR</th>
+    </tr>
+    <tr th:each="car : ${cars}">
+        <td th:utext="${car.getId()}">ID</td>
+        <td th:utext="${car.getBrand()}">BRAND</td>
+        <td th:utext="${car.getColor()}">COLOR</td>
+    </tr>
+</table>
+</body>
+</html>
